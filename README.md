@@ -32,12 +32,11 @@ The proposed framework is designed to improve robustness against unknown spoof m
 
 The architecture consists of:
 
-1. ResNet50 backbone (ImageNet pre-trained).
-2. Multi-scale feature extraction.
-3. U-Net decoder with skip connections.
-4. Soft Spatial Attention (SSA) modules.
-5. Hierarchical feature fusion.
-6. LoRA-enhanced classification head.
+1. Constraint-Driven Attention-Based Representation Learning.
+2. Coupled Parameter-Efficient Adaptation Strategy.
+3. Hierarchical Texture--Semantic Fusion.
+4. ISO-Compliant Evaluation under Cross-Sensor Protocols.
+5. Robust Cross-Domain Generalization.
 
 ## Datasets
 
@@ -48,9 +47,7 @@ Experiments were conducted using the publicly available LivDet datasets:
 * LivDet 2015
 * LivDet 2017
 
-Dataset access information is available from:
-
-https://livdet.org/
+Dataset access information is available from: https://livdet.org/
 
 ## Experimental Results
 
@@ -62,26 +59,6 @@ FAL-Net achieves competitive performance across multiple benchmark datasets and 
 | LivDet 2013 | 99.52%   |
 | LivDet 2015 | 96.08%   |
 | LivDet 2017 | 99.49%   |
-
-## Repository Structure
-
-```text
-FAL-Net/
-│
-├── datasets/
-├── models/
-├── attention/
-├── lora/
-├── training/
-├── evaluation/
-├── notebooks/
-├── pretrained_models/
-├── figures/
-├── requirements.txt
-├── train.py
-├── test.py
-└── README.md
-```
 
 ## Installation
 
@@ -95,13 +72,13 @@ pip install -r requirements.txt
 ## Training
 
 ```bash
-python train.py
+python train_ablation.py
 ```
 
 ## Evaluation
 
 ```bash
-python test.py
+python ablation_runner.py
 ```
 
 ## Reproducibility
